@@ -22,7 +22,7 @@ header {
     order: 3;
 }
 
-header h5 {
+header h1 {
     font-size: 18px;
     margin: auto;
     color: #05b0ff;
@@ -157,11 +157,7 @@ tr:nth-child(1) {
     /* Цвет текста */
 }
 
-
-
-
-
-.form {
+form {
     display: flex;
     border-radius: 5px;
     font-weight: normal;
