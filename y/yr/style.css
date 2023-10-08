@@ -19,13 +19,13 @@ header {
     background: linear-gradient(to top right, #0d1718 40%, #0069ff 90%);
     justify-content: center;
     flex-wrap: wrap;
-    order: 3;
+    order: 0;
 }
 
 header h1 {
     font-size: 18px;
     margin: auto;
-    color: #05b0ff;
+    color: #76bdff;
 
 }
 
@@ -38,7 +38,7 @@ header h1 {
 
 
 header a {
-    color: #05b0ff;
+    color: #00a3ee;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -65,22 +65,28 @@ header a.active {
 }
 
 nav {
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
+.navbar-dark a {
+    color: red;
+}
+
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff;
+}
 
 
 
 
 
-
-
-
-
-.footer-bg {
+.footer-bg-lg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -102,9 +108,10 @@ nav {
 
 }
 
-.table {
+/* .table {
+    order: -2;
     display: flex;
-    border-radius: 5px;
+    border-radius: 4px;
     font-weight: normal;
     border-collapse: collapse;
     flex-direction: column;
@@ -112,11 +119,21 @@ nav {
     border-spacing: 2px;
     flex-wrap: nowrap;
     align-items: center;
-
+    background-color: rgba(184, 135, 11, 0); 
 }
 
-caption {
-    color: #f3f3f3;
+table-primary {
+    background-color: #ffffff;
+}
+
+table {
+    color: #0069ff;
+}
+
+table h2 {
+    text-align: center;
+    align-items: center;
+    color: #0004ff;
 }
 
 thead td {
@@ -129,7 +146,7 @@ table tr {
 
 table td {
     font-size: 18px;
-    color: #ffffff;
+    color: #a81515;
 }
 
 table td,
@@ -147,17 +164,18 @@ table tr:hover {
 
 tr:nth-child(2n) {
     background: #330ac7;
-    /* Цвет фона */
+
 }
 
 tr:nth-child(1) {
     background: #2bb8f0;
-    /* Цвет фона */
+
     color: #fff;
-    /* Цвет текста */
-}
+
+} */
 
 form {
+    order: -1;
     display: flex;
     border-radius: 5px;
     font-weight: normal;
@@ -168,7 +186,15 @@ form {
     color: rgb(255, 255, 255);
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
+}
 
+.form {
+    align-content: center;
+}
+
+form h3 {
+    text-align: center;
 }
 
 .form label {
@@ -276,7 +302,6 @@ li {
 @media screen and (min-width: 415px) {
     body {
         background-image: url(kosmos.jpg);
-        margin: 0;
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
@@ -287,7 +312,23 @@ li {
         flex-direction: column-reverse;
     }
 
+    .navbar-dark .navbar-nav .nav-link.active,
+    .navbar-dark .navbar-nav .show>.nav-link {
+        color: #fff;
+    }
 
+    .navbar a.active {
+        background-color: #ffffff00;
+        color: #ffffff;
+    }
+
+    .nav-link {
+        color: #ffffff;
+    }
+
+    .navbar h1 {
+        color: #ffffff;
+    }
 
     header {
         order: 3;
@@ -304,7 +345,7 @@ li {
     header h5 {
         font-size: 18px;
         margin: auto;
-        color: #05b0ff;
+        color: #ffffff;
 
     }
 
@@ -316,7 +357,7 @@ li {
 
 
     header a {
-        color: #05b0ff;
+        color: #b41e1e;
         padding: 12px;
         text-decoration: none;
         font-size: 18px;
@@ -334,12 +375,12 @@ li {
 
     header a:hover {
         background-color: #000000;
-        color: #05b0ff;
+        color: #e6e6e6;
 
     }
 
     header a.active {
-        background-color: #363686;
+        background-color: #030349;
     }
 
     nav {
@@ -349,12 +390,13 @@ li {
         align-content: center;
     }
 
-    .footer-bg {
+    .footer-bg-lg {
 
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+        align-content: center;
         background: #0088ff;
         background: -webkit-radial-gradient(circle farthest-side at top center, #0088ff 10%, #000000 100%);
         background: -moz-radial-gradient(circle farthest-side at top center, #0088ff 10%, #000000 100%);
@@ -362,30 +404,56 @@ li {
         color: #05b0ff;
     }
 
-    .table {
-        order: -2;
+    .table-striped-sm {
+        background: #c4212100;
+        color: #ffffff;
+    }
+
+    .--bs-body-color {
+        color: #0004ff;
+    }
+
+
+
+
+    .table table-primary {
+        background: rgb(133, 38, 38);
+    }
+
+    /* .table {
+
         display: flex;
         border-radius: 5px;
         font-weight: normal;
         border-collapse: collapse;
-        flex-direction: column;
         text-indent: inherit;
         border-spacing: 2px;
         align-items: center;
         flex-wrap: wrap;
-        align-content: flex-start;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+
     }
 
-    caption {
-        color: #f3f3f3;
+
+
+
+
+    h3 {
+        text-align: center;
+
+
     }
+
+
 
     thead td {
         padding: auto;
     }
 
     table tr {
-        background-color: #2bb8f0;
+        background-color: #ffffff;
     }
 
     table td {
@@ -399,23 +467,27 @@ li {
         padding: 10px 5px;
         line-height: 13px;
         vertical-align: middle;
-        border: 1px solid #000000;
+        border: 1px solid #ffffff;
     }
 
     table tr:hover {
-        background-color: #666666
-    }
-
-    tr:nth-child(2n) {
-        background: #330ac7;
-        /* Цвет фона */
+        background-color: #ffffff
     }
 
     tr:nth-child(1) {
-        background: #2bb8f0;
-        /* Цвет фона */
-        color: #fff;
-        /* Цвет текста */
+        background: #0400ff;
+
+    }
+
+    tr:nth-child(2n) {
+        background: #246883;
+
+        color: #ffffff;
+
+    } */
+
+    .row {
+        align-items: center;
     }
 
     .form {
@@ -439,6 +511,7 @@ li {
     }
 
     .form p {
+        color: #ffffff;
         text-align: center;
     }
 
@@ -530,5 +603,7 @@ li {
         align-items: flex-start;
     }
 
-
+    .box p {
+        color: #ffffff;
+    }
 }
